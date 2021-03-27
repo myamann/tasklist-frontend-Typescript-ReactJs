@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
 import { Table,Badge,Button } from "react-bootstrap";
+import { useHistory } from 'react-router-dom'
 import api from '../../services/api';
 
 import moment from 'moment'
+
+import './index.css';
 
 interface ITask {
     id: number;
@@ -16,6 +19,7 @@ interface ITask {
 const Tasks: React.FC = () => {
 
     const [tasks, setTasks] = useState<ITask[]>([])
+    const history = useHistory();
 
     useEffect(()=>{
         loadTasks()
@@ -32,10 +36,23 @@ const Tasks: React.FC = () => {
         return moment(date).format("DD/MM/YYYY")
     }
 
+    // Link to form page
+    function newTask() {
+        history.push('tasks_form')
+    }
+
+    function editTask(id: number) {
+      history.push(`/tasks_form/${id}`)
+    }
+
   return (
     <div className="container">
       <br />
+      <div className="task-header">
       <h1>Tasks Page</h1>
+      <Button variant="dark" size="sm" onClick={newTask}>Add Task</Button>
+      </div>
+      
       <br/>
       <Table striped bordered hover className="text-center">
         <thead>
@@ -61,7 +78,7 @@ const Tasks: React.FC = () => {
                 </Badge>
                 </td>
             <td>
-                <Button size="sm" className="mr-1" >Edit</Button>
+                <Button size="sm" className="mr-1" onClick={()=>editTask(task.id)} >Edit</Button>
                 <Button size="sm" className="mr-1" variant="success">Complete</Button>
                 <Button size="sm" className="mr-1" variant="info">Details</Button>
                 <Button size="sm" variant="danger">Remove</Button>
