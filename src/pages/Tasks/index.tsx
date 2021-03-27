@@ -17,9 +17,13 @@ interface ITask {
 }
 
 const Tasks: React.FC = () => {
+  const [search, setSearch] = useState('');
   const [tasks, setTasks] = useState<ITask[]>([]);
   const history = useHistory();
 
+  const filteredTasks = tasks.filter(task => {
+    return task.title.toLowerCase().includes( search.toLowerCase())
+  })
 
   // load tasks on the page with first render
   useEffect(() => {
@@ -75,8 +79,13 @@ const Tasks: React.FC = () => {
           Add Task
         </Button>
       </div>
+      <br/>
+      <div className="searchbar">
+      <input type="text" className="searchinput" placeholder="Search your tasks..." onChange={(e)=> setSearch(e.target.value)}/>
 
-      <br />
+      </div>
+      
+      <br/>
       <Table striped bordered hover className="text-center">
         <thead>
           <tr>
@@ -88,7 +97,7 @@ const Tasks: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          {tasks.map((task) => (
+          {filteredTasks.map((task) => (
             <tr key={task.id}>
               <td>{task.id}</td>
               <td>{task.title}</td>

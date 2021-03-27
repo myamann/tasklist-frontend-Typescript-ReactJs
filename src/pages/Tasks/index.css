@@ -4,3 +4,14 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.searchinput {
+    border:2px solid black;
+    border-radius: 2px;
+}

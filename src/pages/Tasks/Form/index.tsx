@@ -72,7 +72,7 @@ const Tasks: React.FC = () => {
 
       <br />
       <div className="container">
-        <Form onSubmit={onSubmit}>
+        <Form onSubmit={onSubmit} className="overflow-scroll">
           <Form.Group>
             <Form.Label>Title</Form.Label>
             <Form.Control
