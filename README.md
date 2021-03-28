@@ -23,8 +23,15 @@ To run this project, install it locally using npm:
  npm start
  
 ```
+  ## HomePage
 
- ![Image](https://raw.githubusercontent.com/myamann/tasklist-frontend-Typescript-ReactJs/master/screenshots/ss1.PNG?token=ALFYGQWIMJKFHY7DLZAQUADAMBE3E)
- ![Image](https://raw.githubusercontent.com/myamann/tasklist-frontend-Typescript-ReactJs/master/screenshots/ss2.PNG?token=ALFYGQR6L3EAFZWTI67JJVTAMBE4I)
- ![Image](https://raw.githubusercontent.com/myamann/tasklist-frontend-Typescript-ReactJs/master/screenshots/ss3.PNG?token=ALFYGQXIX2XCMUSOGESCU5DAMBE6I)
- ![Image](https://raw.githubusercontent.com/myamann/tasklist-frontend-Typescript-ReactJs/master/screenshots/ss4.PNG?token=ALFYGQVYO2HPSTM7AAXIDKDAMBFAM)
+ ![Image](https://github.com/myamann/tasklist-frontend-Typescript-ReactJs/blob/master/screenshots/ss1.PNG?raw=true)
+ 
+ ## TasksPage
+ ![Image](https://github.com/myamann/tasklist-frontend-Typescript-ReactJs/blob/master/screenshots/ss2.PNG?raw=true)
+ 
+ ## SearchComponent
+ ![Image](https://github.com/myamann/tasklist-frontend-Typescript-ReactJs/blob/master/screenshots/ss3.PNG?raw=true)
+ 
+ ## EditPage
+ ![Image](https://github.com/myamann/tasklist-frontend-Typescript-ReactJs/blob/master/screenshots/ss4.PNG?raw=true)
