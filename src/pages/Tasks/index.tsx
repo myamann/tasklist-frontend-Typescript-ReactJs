@@ -34,7 +34,7 @@ const Tasks: React.FC = () => {
   // load all tasks from api and send to state
   async function loadTasks() {
     const response = await api.get("/tasks");
-    console.log(response);
+    
     setTasks(response.data);
   }
 

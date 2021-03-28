@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Tasks: React.FC = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="w-100">
-      <Navbar.Brand href="#home">M.YAMAN</Navbar.Brand>
+      <Navbar.Brand href="/">M.YAMAN</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
